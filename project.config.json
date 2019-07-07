@@ -1,0 +1,58 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wx3099e22e6dcb8d58",
+	"projectname": "823",
+	"svr": "/",
+	"client": "/",
+	"qcloudRoot": "/",
+	"miniprogramRoot": "/",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "群分享",
+					"pathName": "pages/ucenter/orderDetail/orderDetail",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "GsiKXgexFdI5tWvUPPWuc9J7ZrwDOwi_jaQ_O1ND0G0@cr4dev",
+						"shareKey": "I5LxL4fotP3LsdEoX0AsuHjd94Nfk6F1FSn3NsD1t8yUOHTb_aTs28Ou1EV87HWzPuAWRGXLrWK3PtDokYVwng~~"
+					}
+				},
+				{
+					"id": 1,
+					"name": "分享卡牌",
+					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": "1036",
+					"referrerInfo": {
+						"appId": "wxfdbedb4797be7c57"
+					}
+				}
+			]
+		}
+	}
+}

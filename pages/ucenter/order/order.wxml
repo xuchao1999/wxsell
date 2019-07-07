@@ -1,0 +1,35 @@
+<view class="container">
+    <view class="cate-nav">
+        <scroll-view scroll-x="true" class="cate-nav-body" style="width: 750rpx;" scroll-left="{{scrollLeft}}">
+            <view  wx:for="{{orderStatusList}}" class="item {{ currentStatus == item ? 'active' : ''}}" data-id="{{item}}" data-index="{{index}}" bindtap="switchCate">
+                <view class="name">{{item}}</view>
+            </view>
+        </scroll-view>
+    </view>
+
+
+    <view class="orders">
+        <navigator url="../orderDetail/orderDetail?orderId={{item.orderId}}&handleOption={{currentStatus}}" class="order" wx:for="{{orderList}}" wx:key="{{item.orderd}}">
+            <view class="h">
+                <view class="l">订单编号：{{item.orderId}}</view>
+                <view class="r">{{item.order_status_text}}</view>
+            </view>
+            <view class="goods" wx:for="{{item.orderDetailVOS}}" wx:key="{{gitem.id}}" wx:for-item="gitem">
+                <view class="img">
+                    <image src="{{gitem.productIcon}}"></image>
+                </view>
+                <view class="info">
+                    <text class="name">{{gitem.productName}}</text>
+                    <text class="number">共{{gitem.productQuantity}}件商品</text>
+                </view>
+                <view class="status"></view>
+            </view>
+            <view class="b">
+                <view class="l">实付：￥{{item.orderAmount}}</view>
+                <view class="r">
+                    <button class="btn" data-order-index="{{index}}" catchtap="payOrder" wx:if="{{currentStatus == '待付款'}}">去付款</button>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

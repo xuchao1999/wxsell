@@ -1,0 +1,2 @@
+<!--pages/ucenter/deduction/deduction.wxml-->
+<text>{{ deduction }}积分</text>
