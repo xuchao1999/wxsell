@@ -9,6 +9,7 @@ module.exports = {
     CatalogCurrent: NewApiRootUrl + 'catalog/current',  //分类目录当前分类数据接口
 
     AuthLoginByWeixin: NewApiRootUrl + 'buyer/login', //微信登录
+    AuthLogoutByWeixin: NewApiRootUrl + 'buyer/logout', //微信登出
 
     GoodsCount: NewApiRootUrl + 'goods/count',  //统计商品总数
     GoodsList: NewApiRootUrl + 'goods/list',  //获得商品列表

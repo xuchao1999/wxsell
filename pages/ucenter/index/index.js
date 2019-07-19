@@ -66,11 +66,17 @@ Page({
       content: '退出登录？',
       success: function (res) {
         if (res.confirm) {
-          wx.removeStorageSync('token');
-          wx.removeStorageSync('userInfo');
-          wx.switchTab({
-            url: '/pages/index/index'
-          });
+          util.request(api.AuthLogoutByWeixin, {}, 'POST').then(res => {
+            if (res.code == 200) {
+              wx.removeStorageSync('token');
+              wx.removeStorageSync('userInfo');
+              wx.switchTab({
+                url: '/pages/index/index'
+              });
+            }else{
+              console.log('登出失败');
+            }
+          })
         }
       }
     })
